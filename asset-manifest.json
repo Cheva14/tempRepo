@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/website2/static/css/main.04ac61e3.css",
-    "main.js": "/website2/static/js/main.a70ad8b7.js",
+    "main.css": "/website2/static/css/main.bf522003.css",
+    "main.js": "/website2/static/js/main.c41659ba.js",
     "static/media/portfolio.gif": "/website2/static/media/portfolio.ed6c89f1485f23014ebd.gif",
     "static/media/fa-solid-900.svg": "/website2/static/media/fa-solid-900.9fa614346b4e81decc62.svg",
     "static/media/fa-brands-400.svg": "/website2/static/media/fa-brands-400.6fcab609e2f62d5c3104.svg",
@@ -11,7 +11,7 @@
     "static/media/dsc_logo.png": "/website2/static/media/dsc_logo.fdf993910e3f48d0cf30.png",
     "static/media/fa-solid-900.eot": "/website2/static/media/fa-solid-900.d93bcbbb0fbfad39d905.eot",
     "static/media/fa-solid-900.ttf": "/website2/static/media/fa-solid-900.aae41ea25bd0dde9f796.ttf",
-    "static/media/animated_ashutosh.png": "/website2/static/media/animated_ashutosh.a6571aa6386520448027.png",
+    "static/media/codecademy_logo.png": "/website2/static/media/codecademy_logo.1c1a017a70b19bfb7e23.png",
     "static/media/fa-regular-400.svg": "/website2/static/media/fa-regular-400.4e8f9fa44f7ec7479c39.svg",
     "static/media/fa-brands-400.eot": "/website2/static/media/fa-brands-400.b09f783b99c88d6989f7.eot",
     "static/media/fa-brands-400.ttf": "/website2/static/media/fa-brands-400.ec7723ea62ad74c14959.ttf",
@@ -31,9 +31,11 @@
     "static/media/animated_logo.svg": "/website2/static/media/animated_logo.abd0b20ec83cb1f60d42.svg",
     "static/media/fa-solid-900.woff2": "/website2/static/media/fa-solid-900.4a83f63fd7dd55c4ca85.woff2",
     "static/media/fa-brands-400.woff2": "/website2/static/media/fa-brands-400.1c638e5f7632ea819e77.woff2",
-    "static/media/iiitk_logo.png": "/website2/static/media/iiitk_logo.170d558551a09a7d1620.png",
     "static/media/intel_logo.jpg": "/website2/static/media/intel_logo.d7577f35a3dac4e5636d.jpg",
     "static/media/ui_ux_design.svg": "/website2/static/media/ui_ux_design.42a2cdaf132097cc499e.svg",
+    "static/media/snap_cheva.png": "/website2/static/media/snap_cheva.adeb9714dae5b38ad5f8.png",
+    "static/media/lakerfoodco.png": "/website2/static/media/lakerfoodco.226da643c2b031810358.png",
+    "static/media/gvsu_logo.png": "/website2/static/media/gvsu_logo.1f09b6e0ab53230ea568.png",
     "static/media/manOnTable.svg": "/website2/static/media/manOnTable.f861b03b5a2d1a28c198.svg",
     "static/media/muffito_logo.png": "/website2/static/media/muffito_logo.a40e290031eaf389bde1.png",
     "static/media/deeplearning_ai_logo.png": "/website2/static/media/deeplearning_ai_logo.f5e1bd288e7a2b30a390.png",
@@ -53,21 +55,23 @@
     "static/media/experience.svg": "/website2/static/media/experience.c50c576af78a4172f78d.svg",
     "static/media/fa-regular-400.woff": "/website2/static/media/fa-regular-400.2ccf005a6998d30de3d3.woff",
     "static/media/fa-regular-400.woff2": "/website2/static/media/fa-regular-400.e5917ad1531005ea8c3f.woff2",
+    "static/media/codecademy_logo.webp": "/website2/static/media/codecademy_logo.f955d2e3d3de0ef7e132.webp",
     "static/media/feelingProud.svg": "/website2/static/media/feelingProud.288e616ff8dc11bd4713.svg",
     "static/media/cloud_infrastructure.svg": "/website2/static/media/cloud_infrastructure.20b580f8784fe74e6e38.svg",
     "static/media/blogs_image.svg": "/website2/static/media/blogs_image.08bcc48d9a3783389c93.svg",
     "static/media/data_science.svg": "/website2/static/media/data_science.9dcadb158ebe250997f6.svg",
+    "static/media/gvsuit_logo.png": "/website2/static/media/gvsuit_logo.1f5ea923f285b5449959.png",
     "static/media/fullstack.svg": "/website2/static/media/fullstack.32a1ffc74848a2ed7dbf.svg",
     "static/media/education.svg": "/website2/static/media/education.d5cc42f042227db12468.svg",
     "index.html": "/website2/index.html",
     "static/media/googleAssistant.svg": "/website2/static/media/googleAssistant.1c2312558eb2e5f04a45.svg",
     "static/media/talksCardBackAlt.svg": "/website2/static/media/talksCardBackAlt.018d87225926eee9ccc3.svg",
     "static/media/talksCardBack.svg": "/website2/static/media/talksCardBack.7dc8695e60efbc2baab8.svg",
-    "main.04ac61e3.css.map": "/website2/static/css/main.04ac61e3.css.map",
-    "main.a70ad8b7.js.map": "/website2/static/js/main.a70ad8b7.js.map"
+    "main.bf522003.css.map": "/website2/static/css/main.bf522003.css.map",
+    "main.c41659ba.js.map": "/website2/static/js/main.c41659ba.js.map"
   },
   "entrypoints": [
-    "static/css/main.04ac61e3.css",
-    "static/js/main.a70ad8b7.js"
+    "static/css/main.bf522003.css",
+    "static/js/main.c41659ba.js"
   ]
 }
