@@ -1,0 +1,828 @@
+@font-face {
+  font-family: "Brave Youthquakes Free";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Brave Youthquakes Free"),
+    url("https://fonts.cdnfonts.com/s/79370/Brave Youthquakes Free.woff")
+      format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  /* border: red 1px solid; */
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: dimgray;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: white;
+}
+
+h1,
+h2 {
+  padding: 10px 0;
+}
+
+.button {
+  padding: 5px 15px;
+  background-color: rgba(0, 136, 169, 1);
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.button:hover {
+  color: #0088a9;
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+.button:active {
+  position: relative;
+  top: 1px;
+}
+
+header {
+  position: sticky;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 3%;
+  background-color: rgba(75, 75, 75, 0.5);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  transition: 0.5s;
+  z-index: 98;
+}
+
+.logo {
+  margin-right: auto;
+  width: 60px;
+  height: 60px;
+}
+
+section {
+  scroll-margin-top: 60px;
+}
+
+.nav__links {
+  list-style: none;
+
+  display: flex;
+}
+
+.nav__links li {
+  padding: 0px 10px;
+}
+
+.menu {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  z-index: 99;
+
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  transition: all 0.5s ease 0s;
+  background: #0088a9;
+  background-color: rgba(40, 40, 40, 0.75);
+}
+
+.overlay--active {
+  width: 100%;
+}
+
+.overlay__content {
+  overflow-x: hidden;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: all 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #0088a9;
+}
+.overlay .cls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 60px;
+  color: #edf0f1;
+  cursor: pointer;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .cls {
+    font-size: 40px;
+    top: 15px;
+    right: 15px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .nav__links,
+  .cta {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+.banner {
+  position: relative;
+}
+
+.angel {
+  width: 100%;
+}
+
+.center {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  align-items: center;
+}
+.name {
+  flex: 2;
+  font-size: 5vw;
+  font-family: "Brave Youthquakes Free", sans-serif;
+  text-align: center;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0), 1px -1px 0 rgba(0, 0, 0, 0),
+    -1px 1px 0 rgba(0, 0, 0, 0), 1px 1px 0 rgba(255, 255, 0, 0.5);
+}
+.snap {
+  flex: 1;
+}
+
+.face {
+  width: 100%;
+}
+
+.box-about-me {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3%;
+  padding: 3%;
+  border-radius: 25px;
+  transition: all 0.3s ease 0s;
+  background-color: rgb(75, 75, 75);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  color: rgb(200, 200, 200);
+}
+.box-about-me:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: white;
+}
+
+.about-me-text-container {
+  flex: 2;
+  min-width: 67%;
+  padding-bottom: 2%;
+}
+
+.about-me-text-container a {
+  text-decoration: underline;
+  color: #0088a9;
+  transition: 0.5s;
+}
+
+.about-me-resume-container {
+  display: flex;
+  flex: 1;
+  min-width: 300px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 200px;
+  height: 400px;
+  margin: 10px;
+}
+
+.about-me-resume-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  max-width: 300px;
+}
+
+.resume__overlay {
+  position: absolute;
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.5s ease 0s;
+}
+
+.resume__overlay--blur {
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.resume__overlay > * {
+  transform: translateY(20px);
+  transition: transform 0.25s;
+}
+
+.resume__overlay:hover {
+  opacity: 1;
+}
+
+.resume__overlay:hover > * {
+  transform: translateY(0);
+}
+
+.resume__overlay a {
+  margin: 10px;
+}
+
+.box-projects {
+  margin: 3%;
+  padding: 3%;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition: all 0.3s ease 0s;
+  background-color: rgb(75, 75, 75);
+  color: rgb(200, 200, 200);
+}
+
+.box-projects:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: white;
+}
+
+.box-projects ul {
+  display: flex;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.box-projects ul li {
+  list-style: none;
+  margin: 5px;
+}
+
+.box-projects ul li.active {
+  background-color: rgb(255, 255, 255);
+  color: #0088a9;
+}
+
+#filter-text {
+  color: rgb(200, 200, 200);
+}
+
+.project {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project .projectBox {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+}
+
+.project .projectBox img {
+  border-radius: 50px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image__overlay {
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.image__overlay--blur {
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.image__overlay > * {
+  transform: translateY(20px);
+  transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+  opacity: 1;
+}
+
+.image__overlay:hover > * {
+  transform: translateY(0);
+}
+
+.image__description {
+  padding: 20px;
+  text-align: center;
+}
+
+.loader {
+  border: 5px solid #eaf0f6;
+  border-radius: 50%;
+  border-top: 5px solid #0088a9;
+  width: 50px;
+  height: 50px;
+  animation: spinner 3s linear infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.overlay1 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  overflow-x: hidden;
+  z-index: 100;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.overlay1--active {
+  display: block;
+}
+
+.overlay1 .cls1 {
+  position: fixed;
+  right: 0;
+  width: fit-content;
+  overflow-x: hidden;
+  text-align: end;
+  padding-right: 10px;
+  font-size: 50px;
+  padding: fit-content;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.overlay1 .cls1:hover,
+.overlay1 .cls1:focus {
+  color: #0088a9;
+}
+
+.overlay1-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  border-radius: 25px;
+  transition: all 0.3s ease 0s;
+  background-color: rgb(75, 75, 75);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  color: rgb(200, 200, 200);
+}
+
+.overlay1-box:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: white;
+}
+
+.overlay1-content {
+  margin-top: 50px;
+  padding: 0 10px 0 10px;
+  padding-bottom: 50px;
+  overflow-x: hidden;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.overlay1-video {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 560px;
+}
+
+.overlay1-video iframe {
+  width: 100%;
+}
+
+.overlay1-text {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.overlay1-text h1 {
+  margin: 10px;
+}
+
+.overlay1-text a {
+  text-decoration: underline;
+  color: #0088a9;
+  transition: 0.5s;
+}
+
+.overlay1-text a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.overlay2 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  overflow-x: hidden;
+  z-index: 100;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.overlay2--active {
+  display: block;
+}
+
+.overlay2 .cls2 {
+  position: fixed;
+  right: 0;
+  width: fit-content;
+  overflow-x: hidden;
+  text-align: end;
+  padding-right: 10px;
+  font-size: 50px;
+  padding: fit-content;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.overlay2 .cls2:hover,
+.overlay2 .cls2:focus {
+  color: #0088a9;
+}
+
+.overlay3 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  overflow-x: hidden;
+  z-index: 100;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.overlay3--active {
+  display: block;
+}
+
+.overlay3 .cls3 {
+  position: fixed;
+  right: 0;
+  width: fit-content;
+  overflow-x: hidden;
+  text-align: end;
+  padding-right: 10px;
+  font-size: 50px;
+  padding: fit-content;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.overlay3 .cls3:hover,
+.overlay3 .cls3:focus {
+  color: #0088a9;
+}
+
+.overlay4 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  overflow-x: hidden;
+  z-index: 100;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.overlay4--active {
+  display: block;
+}
+
+.overlay4 .cls4 {
+  position: fixed;
+  right: 0;
+  width: fit-content;
+  overflow-x: hidden;
+  text-align: end;
+  padding-right: 10px;
+  font-size: 50px;
+  padding: fit-content;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.overlay4 .cls4:hover,
+.overlay4 .cls4:focus {
+  color: #0088a9;
+}
+
+.overlay5 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  overflow-x: hidden;
+  z-index: 100;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.overlay5--active {
+  display: block;
+}
+
+.overlay5 .cls5 {
+  position: fixed;
+  right: 0;
+  width: fit-content;
+  overflow-x: hidden;
+  text-align: end;
+  padding-right: 10px;
+  font-size: 50px;
+  padding: fit-content;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.overlay5 .cls5:hover,
+.overlay5 .cls5:focus {
+  color: #0088a9;
+}
+
+.overlay6 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  overflow-x: hidden;
+  z-index: 100;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.overlay6--active {
+  display: block;
+}
+
+.overlay6 .cls6 {
+  position: fixed;
+  right: 0;
+  width: fit-content;
+  overflow-x: hidden;
+  text-align: end;
+  padding-right: 10px;
+  font-size: 50px;
+  padding: fit-content;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.overlay6 .cls6:hover,
+.overlay6 .cls6:focus {
+  color: #0088a9;
+}
+
+.overlay7 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  overflow-x: hidden;
+  z-index: 100;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.overlay7--active {
+  display: block;
+}
+
+.overlay7 .cls7 {
+  position: fixed;
+  right: 0;
+  width: fit-content;
+  overflow-x: hidden;
+  text-align: end;
+  padding-right: 10px;
+  font-size: 50px;
+  padding: fit-content;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.overlay7 .cls7:hover,
+.overlay7 .cls7:focus {
+  color: #0088a9;
+}
+
+.overlay8 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  overflow-x: hidden;
+  z-index: 100;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.overlay8--active {
+  display: block;
+}
+
+.overlay8 .cls8 {
+  position: fixed;
+  right: 0;
+  width: fit-content;
+  overflow-x: hidden;
+  text-align: end;
+  padding-right: 10px;
+  font-size: 50px;
+  padding: fit-content;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.overlay8 .cls8:hover,
+.overlay8 .cls8:focus {
+  color: #0088a9;
+}
+
+.box-Contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 3%;
+  padding: 3%;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition: all 0.3s ease 0s;
+  background-color: rgb(75, 75, 75);
+  color: rgb(200, 200, 200);
+}
+.box-Contact:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: white;
+}
+
+.text-container {
+  margin: 5px;
+  max-width: 600px;
+}
+
+.form-container {
+  margin: 5px;
+  width: 600px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.field {
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 20px;
+  padding: 10px 10px;
+  margin: 5px;
+  background-color: gray;
+  transition: 0.3s;
+}
+
+.field:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.field:focus {
+  background-color: white;
+  border: #0088a9;
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(184, 181, 181);
+  opacity: 1; /* Firefox */
+}
+
+textarea {
+  width: 94%;
+}
+
+.btn {
+  text-align: end;
+  margin-right: 10px;
+}
+
+footer {
+  background-color: rgb(75, 75, 75);
+}
+
+#socials-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#socials-container a {
+  color: black;
+  font-size: xx-large;
+  margin: 10px;
+  width: auto;
+  height: 35px;
+}
+
+.credits {
+  text-align: center;
+  padding-bottom: 5px;
+}
